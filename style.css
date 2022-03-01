@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #a915bf;
+}
+
+/*Навигационная панель на главной странице*/
+nav{
+    background: #a915bf;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.active, nav a:hover{
+    background: #87009c;
+    transition: .7s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #ff0000;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+nav a:hover, .active{
+    background: none;
+    color: #03ffff;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+/*Центр страницы там где можно добавить бота на сервер*/
+.glav {
+    margin-top: -65vh;
+}
+
+.glav h2 {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+.glav p {
+    font-family: Montserrat;
+    font-size: 15px;
+    color: white;
+}
+
+/*Кнопка для добавления бота на сервер*/
+.ButtonWrap button {
+    position: relative;
+    background: #edb200;
+    color: white;
+    margin-top: 15px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 34vh;
+    height: 6vh;
+}
+
+.ButtonWrap button:hover {
+    background: #ffc000;
+}
+
+.Button {
+  z-index: 1;
+  padding: 12px 30px;
+  background-color: #53afff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+/*Не знаю как это назвать ну крч переход на нижнюю страницу сайта*/
+img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10vh;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+}
+
+.image h2 {
+    position: absolute;
+    margin-top: -80vh;
+    margin-left: 100px;
+    width: 100%;
+}
+
+.image p {
+    position: absolute;
+    margin-top: -75vh;
+    margin-left: 100px;
+    width: 100%;
+}
+
+/*Футер сайта или страниц*/
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: none;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #a915bf;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/*Настройки изображения белого пятна на сайте*/
+img {
+    width: 100%;
+}
+
+/*Animatet backround!!!!!!*/
+.count-particles{
+  background: #a915bf;
+  position: absolute;
+  margin-top: -100vh;
+  left: 0;
+  width: 80px;
+  color: #ff0000;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: -50px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+#particles-js{
+  width: 100%;
+  margin-top: -200vh;
+  height: 200vh;
+  background-color: #a915bf;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
